@@ -1,0 +1,66 @@
+#txtAdd {
+  width:40rem;
+}
+
+#txtJoin {
+  width:40rem;
+}
+.form{
+  margin-bottom: 20px;  
+}
+.form-group{
+ float: left !important;  
+ margin-left: 10px;
+ margin-right: 5px;
+ 
+}
+
+.highlighted{
+    background-color: lightyellow;
+}
+
+.list-user{
+   min-height: 40px; 
+}
+
+.pos{
+   float: left; 
+}
+
+.x-btn{
+   position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom:2px;
+    z-index: 100;  
+}
+
+.selected{
+    background-color: orange;
+    border-color: darkorange;
+}
+
+.selected:hover{
+    background-color: darkorange;
+    border-color: darkorange;
+}
+.snippet {
+  width: 300px;
+  min-height: 170px;
+  
+}
+
+.my-queue-panel{
+   width: 500px;
+  min-height: 170px;
+border-color: orange;
+}
+
+.bordered {
+  border: 2px solid #ccc;
+}
+
+.desc:hover {
+  border-radius: 5px;
+  border: dashed 2px #ccc;
+}

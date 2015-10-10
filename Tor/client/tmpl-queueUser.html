@@ -1,0 +1,9 @@
+<template name="queueUser">
+<li class="list-group-item list-user {{highlighted}}">
+    <h3 class="panel-title pos">{{position}}.</h3>
+    <h3 class="panel-title pos username">{{username}}</h3>
+    {{#if canDelete}}
+    <button class="btn x-btn">X</button>
+    {{/if}}
+    </li>
+</template>

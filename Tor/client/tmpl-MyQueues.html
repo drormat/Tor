@@ -1,0 +1,45 @@
+<template name="myQueues">
+    <div id="myQueuesView">
+   <h3>My Queue's</h3>
+    <div class="form">
+         <div class="form-group">
+           <input type="text"
+           id="txtAdd"
+           class="form-control"
+           placeholder="New queue name here">
+         </div>
+         <button id="btnAdd" class="btn btn-info">Create new Queue</button>
+       </div>
+  <div class="container">
+    {{#masonryContainer id='MasonryContainer' columWidth=25 gutter=4 transitionDuration='0.1s'}}
+    {{#each myQueues}}
+    {{> myQueue}}
+    {{/each}}
+    {{/masonryContainer}}
+  </div>
+        </div>
+</template>
+
+
+<template name="myQueue">
+ {{#masonryElement 'MasonryContainer'}}
+ <div class="my-queue-panel panel panel-success">
+ <div class="panel-heading">
+   <h3 class="panel-title">{{name}}</h3>
+   <h3 class="panel-title">{{identityKey}}</h3>
+ </div>
+ <div class="panel-body">
+     <ul>
+        {{#each myQueue}}
+          {{> queueUser}}
+        {{/each}}
+     </ul>
+  <!--{{#if editing}}
+    <textarea name="description" rows="3" class="form-control editing" value={{desc}}></textarea>
+  {{else}}
+   {{desc}}
+  {{/if}}-->
+ </div>
+  </div>
+  {{/masonryElement}}
+</template>

@@ -1,0 +1,45 @@
+<template name="regQueues">
+     <div id="regQueuesView">
+    <h3>Registed Queue's</h3>
+    <div class="form">
+         <div class="form-group">
+           <input type="text"
+           id="txtJoin"
+           class="form-control"
+           placeholder="Exist queue ID to join...">
+         </div>
+         <button id="btnJoin" class="btn btn-info">Join Queue</button>
+       </div>
+  <div class="container">
+    {{#masonryContainer id='MasonryContainer' columWidth=25 gutter=4 transitionDuration='0.1s'}}
+    {{#each regQueues}}
+    {{> regQueue}}
+    {{/each}}
+    {{/masonryContainer}}
+  </div>
+    </div>
+</template>
+
+
+<template name="regQueue">
+ {{#masonryElement 'MasonryContainer'}}
+ <div class="my-queue-panel panel panel-success">
+ <div class="panel-heading">
+   <h3 class="panel-title">{{name}}</h3>
+   <h3 class="panel-title">{{identityKey}}</h3>
+ </div>
+ <div class="panel-body">
+     <ul>
+        {{#each regQueue}}
+          {{> queueUser}}
+        {{/each}}
+     </ul>
+  <!--{{#if editing}}
+    <textarea name="description" rows="3" class="form-control editing" value={{desc}}></textarea>
+  {{else}}
+   {{desc}}
+  {{/if}}-->
+ </div>
+  </div>
+  {{/masonryElement}}
+</template>
