@@ -1,3 +1,22 @@
+body{
+ background-color: #F7F7FF;   
+}
+
+.navbar{
+ background-color: #151E3F;
+}
+
+.navbar-default .navbar-nav > li > a {
+   color: white; /*Change active text color here*/
+    }
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+color: #A9DEF9;  /*Sets the text hover color on navbar*/
+}
+h3{
+ text-align: center;   
+}
+
 #txtAdd {
   width:40rem;
 }
@@ -7,6 +26,7 @@
 }
 .form{
   margin-bottom: 20px;  
+  margin-left: 30%; 
 }
 .form-group{
  float: left !important;  
@@ -35,14 +55,25 @@
     z-index: 100;  
 }
 
+#btnAdd
+{
+   background-color: #FF6663;
+    border-color: #CC4747; 
+}
+
+#btnJoin{
+   background-color: #FF6663;
+    border-color: #CC4747; 
+}
+
 .selected{
-    background-color: orange;
-    border-color: darkorange;
+    background-color: #FF6663;
+    border-color: #CC4747;
 }
 
 .selected:hover{
-    background-color: darkorange;
-    border-color: darkorange;
+    background-color: #CC4747;
+    border-color: #CC4747;
 }
 
 .queue-panel{

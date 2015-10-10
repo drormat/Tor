@@ -20,6 +20,18 @@ Template.myQueues.events({
   }
 });
 
+Template.myQueue.events({
+  'click .del-btn' : function(e){
+    var unvisitedUsers = QueueUsers.find({identityKey:this.identityKey,visited:false}).fetch();
+    for (var i = 0, len = unvisitedUsers.length; i < len; i++) {
+        QueueUsers.update({_id:unvisitedUsers[i]._id},{$set:{visited:true}});
+    } 
+   // QueueUsers.update({identityKey:this.identityKey,visited:false},{$set:{visited:true}});
+    Queues.remove({_id:this._id});
+    
+  }
+});
+
 function addQueue(){
   var txtNode = $('#txtAdd');
   if (!txtNode || !txtNode.val() || !Meteor.userId()) return;
@@ -32,7 +44,7 @@ function addQueue(){
 }
 
 function createQueueIdKey(newQueueName){
-  var idKey = (Math.floor(Math.random()*90000) + 10000).toString();
+  var idKey = (Math.floor(Math.random()*9000000) + 1000000).toString();
   var getQueue = Queues.findOne({identityKey:idKey});
   if(getQueue){
      if(getQueue.name === newQueueName) {return;} //this Queue is already exist

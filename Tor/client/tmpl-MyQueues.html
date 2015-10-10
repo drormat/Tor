@@ -6,12 +6,12 @@
            <input type="text"
            id="txtAdd"
            class="form-control"
-           placeholder="New queue name here">
+           placeholder="Enter here the name of the new Queue...">
          </div>
          <button id="btnAdd" class="btn btn-info">Create new Queue</button>
        </div>
   <div class="container">
-    {{#masonryContainer id='MasonryContainer' columWidth=25 gutter=4 transitionDuration='0.1s'}}
+    {{#masonryContainer id='MasonryContainer' columWidth=25 gutter=2 transitionDuration='0.1s'}}
     {{#each myQueues}}
     {{> myQueue}}
     {{/each}}
@@ -25,6 +25,7 @@
  {{#masonryElement 'MasonryContainer'}}
  <div class="queue-panel panel panel-info">
  <div class="panel-heading">
+   <button class="btn del-btn">X</button>
    <h3 class="panel-title">{{name}}</h3>
    <h3 class="panel-title">{{identityKey}}</h3>
  </div>
