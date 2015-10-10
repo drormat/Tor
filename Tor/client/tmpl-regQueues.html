@@ -11,7 +11,7 @@
          <button id="btnJoin" class="btn btn-info">Join Queue</button>
        </div>
   <div class="container">
-    {{#masonryContainer id='MasonryContainer' columWidth=25 gutter=4 transitionDuration='0.1s'}}
+    {{#masonryContainer id='MasonryContainer' columWidth=500 gutter=4 transitionDuration='0.1s'}}
     {{#each regQueues}}
     {{> regQueue}}
     {{/each}}
@@ -23,7 +23,7 @@
 
 <template name="regQueue">
  {{#masonryElement 'MasonryContainer'}}
- <div class="my-queue-panel panel panel-success">
+ <div class="queue-panel panel panel-success">
  <div class="panel-heading">
    <h3 class="panel-title">{{name}}</h3>
    <h3 class="panel-title">{{identityKey}}</h3>
@@ -34,11 +34,6 @@
           {{> queueUser}}
         {{/each}}
      </ul>
-  <!--{{#if editing}}
-    <textarea name="description" rows="3" class="form-control editing" value={{desc}}></textarea>
-  {{else}}
-   {{desc}}
-  {{/if}}-->
  </div>
   </div>
   {{/masonryElement}}

@@ -6,6 +6,7 @@ Template.regQueues.helpers({
         var regQ = Queues.findOne({identityKey:myRegisted[i].identityKey});
         custumQueuesListv.push(regQ);
     }
+      changeToJoinScreen();
       return custumQueuesListv;
   }
 });
@@ -48,17 +49,24 @@ function joinQueue(){
     //var userCount = QueueUsers.find({identityKey:idKey,visited:false}).count();
     var isPasswordAccount = Meteor.user().emails;
     var username = getUserName();
-
-    QueueUsers.insert({
-    user:Meteor.userId(),
-    username:username,
-    identityKey:txtNode.val(),
-    //position:userCount + 1,
-    visited:false
-    });
-  txtNode.val('');
+    var currentQueue = QueueUsers.find({identityKey:idKey,visited:false}).fetch();
+    var userExist = false;
+    for (var i = 0, len = currentQueue.length; i < len; i++) {
+        if(currentQueue[i].user == Meteor.userId())
+        {
+            userExist = true;
+        }
+    }
+    if(!userExist){
+        QueueUsers.insert({
+        user:Meteor.userId(),
+        username:username,
+        identityKey:txtNode.val(),
+        visited:false
+        });
+    } 
   }
-  
+  txtNode.val('');
 }
 function getUserName(){
     var isPasswordAccount = Meteor.user().emails;
@@ -73,4 +81,15 @@ function getUserName(){
 function getPosition(queueKeyId){
   var userCount = QueueUsers.find({identityKey:idKey}).count();
   return userCount+1;
+}
+
+function changeToJoinScreen(){
+  var addBtn = $('#btnAddNav');
+  var joinBtn = $('#btnJoinNav');
+  var myView = document.getElementById("myQueuesView");
+  var myJoined = document.getElementById("regQueuesView");
+  addBtn.removeClass("selected");
+  myView.style.display = 'none';
+  joinBtn.addClass("selected"); 
+  myJoined.style.display = 'block';
 }

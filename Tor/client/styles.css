@@ -44,23 +44,12 @@
     background-color: darkorange;
     border-color: darkorange;
 }
-.snippet {
-  width: 300px;
-  min-height: 170px;
-  
-}
 
-.my-queue-panel{
+.queue-panel{
    width: 500px;
   min-height: 170px;
-border-color: orange;
 }
 
 .bordered {
   border: 2px solid #ccc;
-}
-
-.desc:hover {
-  border-radius: 5px;
-  border: dashed 2px #ccc;
 }

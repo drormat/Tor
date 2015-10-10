@@ -23,7 +23,7 @@
 
 <template name="myQueue">
  {{#masonryElement 'MasonryContainer'}}
- <div class="my-queue-panel panel panel-success">
+ <div class="queue-panel panel panel-info">
  <div class="panel-heading">
    <h3 class="panel-title">{{name}}</h3>
    <h3 class="panel-title">{{identityKey}}</h3>
@@ -34,11 +34,6 @@
           {{> queueUser}}
         {{/each}}
      </ul>
-  <!--{{#if editing}}
-    <textarea name="description" rows="3" class="form-control editing" value={{desc}}></textarea>
-  {{else}}
-   {{desc}}
-  {{/if}}-->
  </div>
   </div>
   {{/masonryElement}}
