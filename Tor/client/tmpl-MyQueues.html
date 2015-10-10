@@ -11,18 +11,15 @@
          <button id="btnAdd" class="btn btn-info">Create new Queue</button>
        </div>
   <div class="container">
-    {{#masonryContainer id='MasonryContainer' columWidth=25 gutter=2 transitionDuration='0.1s'}}
     {{#each myQueues}}
     {{> myQueue}}
     {{/each}}
-    {{/masonryContainer}}
   </div>
         </div>
 </template>
 
 
 <template name="myQueue">
- {{#masonryElement 'MasonryContainer'}}
  <div class="queue-panel panel panel-info">
  <div class="panel-heading">
    <button class="btn del-btn">X</button>
@@ -37,5 +34,4 @@
      </ul>
  </div>
   </div>
-  {{/masonryElement}}
 </template>

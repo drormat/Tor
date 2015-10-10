@@ -86,8 +86,12 @@ function getPosition(queueKeyId){
 function changeToJoinScreen(){
   var addBtn = $('#btnAddNav');
   var joinBtn = $('#btnJoinNav');
+  var masonContainerReg = $('#masonryElementReg');
+  var masonContainer = $('#masonryElement');
   var myView = document.getElementById("myQueuesView");
   var myJoined = document.getElementById("regQueuesView");
+  
+  masonContainer.hide();
   addBtn.removeClass("selected");
   myView.style.display = 'none';
   joinBtn.addClass("selected"); 

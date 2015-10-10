@@ -12,6 +12,7 @@ function changeToAddScreen(){
   var joinBtn = $('#btnJoinNav');
   var myView = document.getElementById("myQueuesView");
   var myJoined = document.getElementById("regQueuesView");
+
   joinBtn.removeClass("selected");
   myJoined.style.display = 'none';
   addBtn.addClass("selected"); 
@@ -23,6 +24,7 @@ function changeToJoinScreen(){
   var joinBtn = $('#btnJoinNav');
   var myView = document.getElementById("myQueuesView");
   var myJoined = document.getElementById("regQueuesView");
+
   addBtn.removeClass("selected");
   myView.style.display = 'none';
   joinBtn.addClass("selected"); 

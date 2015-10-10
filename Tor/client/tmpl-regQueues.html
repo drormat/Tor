@@ -11,18 +11,15 @@
          <button id="btnJoin" class="btn btn-info">Join Queue</button>
        </div>
   <div class="container">
-    {{#masonryContainer id='MasonryContainer' columWidth=500 gutter=4 transitionDuration='0.1s'}}
     {{#each regQueues}}
     {{> regQueue}}
     {{/each}}
-    {{/masonryContainer}}
   </div>
     </div>
 </template>
 
 
 <template name="regQueue">
- {{#masonryElement 'MasonryContainer'}}
  <div class="queue-panel panel panel-success">
  <div class="panel-heading">
    <h3 class="panel-title">{{name}}</h3>
@@ -36,5 +33,4 @@
      </ul>
  </div>
   </div>
-  {{/masonryElement}}
 </template>

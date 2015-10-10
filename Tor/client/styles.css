@@ -13,6 +13,8 @@ body{
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
 color: #A9DEF9;  /*Sets the text hover color on navbar*/
 }
+
+
 h3{
  text-align: center;   
 }
@@ -76,8 +78,14 @@ h3{
     border-color: #CC4747;
 }
 
+.panel
+{
+ margin: 5px;
+ float: left;   
+}
+
 .queue-panel{
-   width: 500px;
+   width: 350px;
   min-height: 170px;
 }
 
