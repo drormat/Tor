@@ -1,7 +1,11 @@
 <template name="main">
   <body>
     {{> toolbar}}
+      {{#if currentUser}}
     {{> myQueues}}
     {{> regQueues}}
+    {{else}}
+      <h1 id="welcome">Welcome to Tor - making queue's simple </h1>
+      {{/if}}
   </body>
 </template>

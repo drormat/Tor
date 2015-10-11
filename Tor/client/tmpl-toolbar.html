@@ -13,6 +13,7 @@
   </div>
   <div class="navbar-collapse collapse">
     <ul class="nav navbar-nav navbar-right">
+        {{#if currentUser}}
      <li>
        <div class="navbar-form navbar-left">
          <button id="btnAddNav" class="btn btn-info selected">My Queue's</button>
@@ -23,6 +24,7 @@
          <button id="btnJoinNav" class="btn btn-info">Registered Queue's</button>
        </div>
      </li>
+        {{/if}}
       {{> loginButtons}} <!-- here -->
     </ul>
   </div>

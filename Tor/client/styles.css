@@ -1,5 +1,9 @@
 body{
- background-color: #F7F7FF;   
+ background-color: #F7F7FF;  
+}
+
+#welcome{
+ text-align: center;
 }
 
 .navbar{
